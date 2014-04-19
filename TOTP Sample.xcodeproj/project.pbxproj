@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48FF8A48190225410051D4F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A47190225410051D4F9 /* Foundation.framework */; };
+		48FF8A4A190225410051D4F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A49190225410051D4F9 /* CoreGraphics.framework */; };
+		48FF8A4C190225410051D4F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A4B190225410051D4F9 /* UIKit.framework */; };
+		48FF8A52190225410051D4F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48FF8A50190225410051D4F9 /* InfoPlist.strings */; };
+		48FF8A54190225410051D4F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FF8A53190225410051D4F9 /* main.m */; };
+		48FF8A58190225410051D4F9 /* YAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FF8A57190225410051D4F9 /* YAAppDelegate.m */; };
+		48FF8A5B190225410051D4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FF8A59190225410051D4F9 /* Main.storyboard */; };
+		48FF8A5E190225410051D4F9 /* YAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FF8A5D190225410051D4F9 /* YAViewController.m */; };
+		48FF8A60190225410051D4F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FF8A5F190225410051D4F9 /* Images.xcassets */; };
+		48FF8A67190225410051D4F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A66190225410051D4F9 /* XCTest.framework */; };
+		48FF8A68190225410051D4F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A47190225410051D4F9 /* Foundation.framework */; };
+		48FF8A69190225410051D4F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A4B190225410051D4F9 /* UIKit.framework */; };
+		48FF8A71190225410051D4F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48FF8A6F190225410051D4F9 /* InfoPlist.strings */; };
+		48FF8A73190225410051D4F9 /* TOTP_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FF8A72190225410051D4F9 /* TOTP_SampleTests.m */; };
+		48FF8A81190226B60051D4F9 /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FF8A7E190226B60051D4F9 /* OTPGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		48FF8A82190226B60051D4F9 /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FF8A80190226B60051D4F9 /* TOTPGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48FF8A6A190225410051D4F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48FF8A3C190225410051D4F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48FF8A43190225410051D4F9;
+			remoteInfo = "TOTP Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48FF8A44190225410051D4F9 /* TOTP Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOTP Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FF8A47190225410051D4F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		48FF8A49190225410051D4F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		48FF8A4B190225410051D4F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		48FF8A4F190225410051D4F9 /* TOTP Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TOTP Sample-Info.plist"; sourceTree = "<group>"; };
+		48FF8A51190225410051D4F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48FF8A53190225410051D4F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48FF8A55190225410051D4F9 /* TOTP Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TOTP Sample-Prefix.pch"; sourceTree = "<group>"; };
+		48FF8A56190225410051D4F9 /* YAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAAppDelegate.h; sourceTree = "<group>"; };
+		48FF8A57190225410051D4F9 /* YAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAAppDelegate.m; sourceTree = "<group>"; };
+		48FF8A5A190225410051D4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48FF8A5C190225410051D4F9 /* YAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAViewController.h; sourceTree = "<group>"; };
+		48FF8A5D190225410051D4F9 /* YAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAViewController.m; sourceTree = "<group>"; };
+		48FF8A5F190225410051D4F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		48FF8A65190225410051D4F9 /* TOTP SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOTP SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FF8A66190225410051D4F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		48FF8A6E190225410051D4F9 /* TOTP SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TOTP SampleTests-Info.plist"; sourceTree = "<group>"; };
+		48FF8A70190225410051D4F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48FF8A72190225410051D4F9 /* TOTP_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOTP_SampleTests.m; sourceTree = "<group>"; };
+		48FF8A7D190226B60051D4F9 /* OTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OTPGenerator.h; path = Classes/OTPGenerator.h; sourceTree = "<group>"; };
+		48FF8A7E190226B60051D4F9 /* OTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OTPGenerator.m; path = Classes/OTPGenerator.m; sourceTree = "<group>"; };
+		48FF8A7F190226B60051D4F9 /* TOTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOTPGenerator.h; path = Classes/TOTPGenerator.h; sourceTree = "<group>"; };
+		48FF8A80190226B60051D4F9 /* TOTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOTPGenerator.m; path = Classes/TOTPGenerator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48FF8A41190225410051D4F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FF8A4A190225410051D4F9 /* CoreGraphics.framework in Frameworks */,
+				48FF8A4C190225410051D4F9 /* UIKit.framework in Frameworks */,
+				48FF8A48190225410051D4F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48FF8A62190225410051D4F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FF8A67190225410051D4F9 /* XCTest.framework in Frameworks */,
+				48FF8A69190225410051D4F9 /* UIKit.framework in Frameworks */,
+				48FF8A68190225410051D4F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48FF8A3B190225410051D4F9 = {
+			isa = PBXGroup;
+			children = (
+				48FF8A7C1902269F0051D4F9 /* Classes */,
+				48FF8A4D190225410051D4F9 /* TOTP Sample */,
+				48FF8A6C190225410051D4F9 /* TOTP SampleTests */,
+				48FF8A46190225410051D4F9 /* Frameworks */,
+				48FF8A45190225410051D4F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48FF8A45190225410051D4F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A44190225410051D4F9 /* TOTP Sample.app */,
+				48FF8A65190225410051D4F9 /* TOTP SampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48FF8A46190225410051D4F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A47190225410051D4F9 /* Foundation.framework */,
+				48FF8A49190225410051D4F9 /* CoreGraphics.framework */,
+				48FF8A4B190225410051D4F9 /* UIKit.framework */,
+				48FF8A66190225410051D4F9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48FF8A4D190225410051D4F9 /* TOTP Sample */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A56190225410051D4F9 /* YAAppDelegate.h */,
+				48FF8A57190225410051D4F9 /* YAAppDelegate.m */,
+				48FF8A59190225410051D4F9 /* Main.storyboard */,
+				48FF8A5C190225410051D4F9 /* YAViewController.h */,
+				48FF8A5D190225410051D4F9 /* YAViewController.m */,
+				48FF8A5F190225410051D4F9 /* Images.xcassets */,
+				48FF8A4E190225410051D4F9 /* Supporting Files */,
+			);
+			path = "TOTP Sample";
+			sourceTree = "<group>";
+		};
+		48FF8A4E190225410051D4F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A4F190225410051D4F9 /* TOTP Sample-Info.plist */,
+				48FF8A50190225410051D4F9 /* InfoPlist.strings */,
+				48FF8A53190225410051D4F9 /* main.m */,
+				48FF8A55190225410051D4F9 /* TOTP Sample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48FF8A6C190225410051D4F9 /* TOTP SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A72190225410051D4F9 /* TOTP_SampleTests.m */,
+				48FF8A6D190225410051D4F9 /* Supporting Files */,
+			);
+			path = "TOTP SampleTests";
+			sourceTree = "<group>";
+		};
+		48FF8A6D190225410051D4F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A6E190225410051D4F9 /* TOTP SampleTests-Info.plist */,
+				48FF8A6F190225410051D4F9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48FF8A7C1902269F0051D4F9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				48FF8A7D190226B60051D4F9 /* OTPGenerator.h */,
+				48FF8A7E190226B60051D4F9 /* OTPGenerator.m */,
+				48FF8A7F190226B60051D4F9 /* TOTPGenerator.h */,
+				48FF8A80190226B60051D4F9 /* TOTPGenerator.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48FF8A43190225410051D4F9 /* TOTP Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FF8A76190225410051D4F9 /* Build configuration list for PBXNativeTarget "TOTP Sample" */;
+			buildPhases = (
+				48FF8A40190225410051D4F9 /* Sources */,
+				48FF8A41190225410051D4F9 /* Frameworks */,
+				48FF8A42190225410051D4F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TOTP Sample";
+			productName = "TOTP Sample";
+			productReference = 48FF8A44190225410051D4F9 /* TOTP Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48FF8A64190225410051D4F9 /* TOTP SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FF8A79190225410051D4F9 /* Build configuration list for PBXNativeTarget "TOTP SampleTests" */;
+			buildPhases = (
+				48FF8A61190225410051D4F9 /* Sources */,
+				48FF8A62190225410051D4F9 /* Frameworks */,
+				48FF8A63190225410051D4F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48FF8A6B190225410051D4F9 /* PBXTargetDependency */,
+			);
+			name = "TOTP SampleTests";
+			productName = "TOTP SampleTests";
+			productReference = 48FF8A65190225410051D4F9 /* TOTP SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48FF8A3C190225410051D4F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Yazid Azahari";
+				TargetAttributes = {
+					48FF8A64190225410051D4F9 = {
+						TestTargetID = 48FF8A43190225410051D4F9;
+					};
+				};
+			};
+			buildConfigurationList = 48FF8A3F190225410051D4F9 /* Build configuration list for PBXProject "TOTP Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48FF8A3B190225410051D4F9;
+			productRefGroup = 48FF8A45190225410051D4F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48FF8A43190225410051D4F9 /* TOTP Sample */,
+				48FF8A64190225410051D4F9 /* TOTP SampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48FF8A42190225410051D4F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FF8A60190225410051D4F9 /* Images.xcassets in Resources */,
+				48FF8A52190225410051D4F9 /* InfoPlist.strings in Resources */,
+				48FF8A5B190225410051D4F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48FF8A63190225410051D4F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FF8A71190225410051D4F9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48FF8A40190225410051D4F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FF8A58190225410051D4F9 /* YAAppDelegate.m in Sources */,
+				48FF8A5E190225410051D4F9 /* YAViewController.m in Sources */,
+				48FF8A82190226B60051D4F9 /* TOTPGenerator.m in Sources */,
+				48FF8A54190225410051D4F9 /* main.m in Sources */,
+				48FF8A81190226B60051D4F9 /* OTPGenerator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48FF8A61190225410051D4F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FF8A73190225410051D4F9 /* TOTP_SampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48FF8A6B190225410051D4F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48FF8A43190225410051D4F9 /* TOTP Sample */;
+			targetProxy = 48FF8A6A190225410051D4F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48FF8A50190225410051D4F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FF8A51190225410051D4F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		48FF8A59190225410051D4F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FF8A5A190225410051D4F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48FF8A6F190225410051D4F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FF8A70190225410051D4F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48FF8A74190225410051D4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48FF8A75190225410051D4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48FF8A77190225410051D4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TOTP Sample/TOTP Sample-Prefix.pch";
+				INFOPLIST_FILE = "TOTP Sample/TOTP Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		48FF8A78190225410051D4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TOTP Sample/TOTP Sample-Prefix.pch";
+				INFOPLIST_FILE = "TOTP Sample/TOTP Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		48FF8A7A190225410051D4F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TOTP Sample.app/TOTP Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TOTP Sample/TOTP Sample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TOTP SampleTests/TOTP SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		48FF8A7B190225410051D4F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TOTP Sample.app/TOTP Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TOTP Sample/TOTP Sample-Prefix.pch";
+				INFOPLIST_FILE = "TOTP SampleTests/TOTP SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48FF8A3F190225410051D4F9 /* Build configuration list for PBXProject "TOTP Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FF8A74190225410051D4F9 /* Debug */,
+				48FF8A75190225410051D4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48FF8A76190225410051D4F9 /* Build configuration list for PBXNativeTarget "TOTP Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FF8A77190225410051D4F9 /* Debug */,
+				48FF8A78190225410051D4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48FF8A79190225410051D4F9 /* Build configuration list for PBXNativeTarget "TOTP SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FF8A7A190225410051D4F9 /* Debug */,
+				48FF8A7B190225410051D4F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48FF8A3C190225410051D4F9 /* Project object */;
+}
