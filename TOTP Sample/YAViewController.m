@@ -44,11 +44,12 @@
     
     long timestamp = (long)[now timeIntervalSince1970];
     if(timestamp % [self.expiryTextField.text integerValue] != 0){
-        timestamp = timestamp - timestamp % [self.expiryTextField.text integerValue];
+        timestamp -= timestamp % [self.expiryTextField.text integerValue];
     }
 
     self.dateLabel.text = dateString;
     self.timestampLabel.text = [NSString stringWithFormat:@"%ld",timestamp];
+    
     [self generatePIN];
 }
 
@@ -57,9 +58,13 @@
     NSString *secret = self.secretTextField.text;
     NSData *secretData =  [NSData dataWithBase32String:secret];
     
-    TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:[self.digitsTextField.text integerValue] period:[self.expiryTextField.text integerValue]];
+    NSInteger digits = [self.digitsTextField.text integerValue];
+    NSInteger period = [self.expiryTextField.text integerValue];
+    NSTimeInterval timestamp = [self.timestampLabel.text integerValue];
     
-    NSString *pin = [generator generateOTPForDate:[NSDate dateWithTimeIntervalSince1970:[self.timestampLabel.text integerValue]]];
+    TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:digits period:period];
+    
+    NSString *pin = [generator generateOTPForDate:[NSDate dateWithTimeIntervalSince1970:timestamp]];
     
     self.PINLabel.text = pin;
 }
