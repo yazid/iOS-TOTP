@@ -15,7 +15,7 @@ the same codes as the Google Authenticator app)
   2. HOTPGenerator.m/.h*
   3. MF_Base32Additions.m/.h
 
-Note: i and ii are not ARC-compliant so be sure to add the `-fno-objc-arc` Compiler Flag under your target's Build Phases > Compile Sources
+    Note: i and ii are not ARC-compliant so be sure to add the `-fno-objc-arc` Compiler Flag under your target's Build Phases > Compile Sources
 
 2. Imports:
 
@@ -33,7 +33,10 @@ Note: i and ii are not ARC-compliant so be sure to add the `-fno-objc-arc` Compi
     TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData 
     algorithm:kOTPGeneratorSHA1Algorithm digits:6 period:30];
     ```
-Note: `digits` can be 6-8, `period` is the PIN expiry period in seconds, `algorithm` can be either kOTPGeneratorSHA1Algorithm (default), `kOTPGeneratorSHA256Algorithm`, `kOTPGeneratorSHA512Algorithm`, or `kOTPGeneratorSHAMD5Algorithm`.
+    Note: 
+    * `digits` can be 6-8
+    * `period` is the PIN expiry period in seconds
+    * `algorithm` can be either `kOTPGeneratorSHA1Algorithm` (default), `kOTPGeneratorSHA256Algorithm`, `kOTPGeneratorSHA512Algorithm`, or `kOTPGeneratorSHAMD5Algorithm`.
 
 4. Generate PIN:
 
