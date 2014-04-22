@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4828593D190618BF00682C4D /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4828593C190618BF00682C4D /* MF_Base32Additions.m */; };
 		48FF8A48190225410051D4F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A47190225410051D4F9 /* Foundation.framework */; };
 		48FF8A4A190225410051D4F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A49190225410051D4F9 /* CoreGraphics.framework */; };
 		48FF8A4C190225410051D4F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FF8A4B190225410051D4F9 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4828593B190618BF00682C4D /* MF_Base32Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MF_Base32Additions.h; path = Classes/MF_Base32Additions.h; sourceTree = "<group>"; };
+		4828593C190618BF00682C4D /* MF_Base32Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MF_Base32Additions.m; path = Classes/MF_Base32Additions.m; sourceTree = "<group>"; };
 		48FF8A44190225410051D4F9 /* TOTP Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOTP Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FF8A47190225410051D4F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48FF8A49190225410051D4F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +169,8 @@
 				48FF8A7E190226B60051D4F9 /* OTPGenerator.m */,
 				48FF8A7F190226B60051D4F9 /* TOTPGenerator.h */,
 				48FF8A80190226B60051D4F9 /* TOTPGenerator.m */,
+				4828593B190618BF00682C4D /* MF_Base32Additions.h */,
+				4828593C190618BF00682C4D /* MF_Base32Additions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				48FF8A5E190225410051D4F9 /* YAViewController.m in Sources */,
 				48FF8A82190226B60051D4F9 /* TOTPGenerator.m in Sources */,
 				48FF8A54190225410051D4F9 /* main.m in Sources */,
+				4828593D190618BF00682C4D /* MF_Base32Additions.m in Sources */,
 				48FF8A81190226B60051D4F9 /* OTPGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "YAViewController.h"
 #import "TOTPGenerator.h"
+#import "MF_Base32Additions.h"
 
 @interface YAViewController ()
 
@@ -23,8 +24,8 @@
     self.expiryTextField.delegate = self;
     self.digitsTextField.delegate = self;
     
-    self.secretTextField.text = @"123456789";
-    self.expiryTextField.text = @"10";
+    self.secretTextField.text = @"abcdefghijklmnop";
+    self.expiryTextField.text = @"30";
     self.digitsTextField.text = @"6";
     
     [self updateUI];
@@ -35,21 +36,28 @@
 - (void)updateUI
 {
     NSDate *now = [NSDate date];
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd/MM/YYYY HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    [dateFormatter setTimeZone:timeZone];
+    NSString *dateString = [dateFormatter stringFromDate:now];
     
-    self.dateLabel.text = [dateFormatter stringFromDate:now];
-    self.timestampLabel.text = [NSString stringWithFormat:@"%ld",(long)[now timeIntervalSince1970]];
-    
+    long timestamp = (long)[now timeIntervalSince1970];
+    if(timestamp % [self.expiryTextField.text integerValue] != 0){
+        timestamp = timestamp - timestamp % [self.expiryTextField.text integerValue];
+    }
+
+    self.dateLabel.text = dateString;
+    self.timestampLabel.text = [NSString stringWithFormat:@"%ld",timestamp];
     [self generatePIN];
 }
 
 -(void)generatePIN
 {
     NSString *secret = self.secretTextField.text;
+    NSData *secretData =  [NSData dataWithBase32String:secret];
     
-    TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:[secret dataUsingEncoding:NSASCIIStringEncoding] algorithm:kOTPGeneratorSHA1Algorithm digits:[self.digitsTextField.text integerValue] period:[self.expiryTextField.text integerValue]];
+    TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:[self.digitsTextField.text integerValue] period:[self.expiryTextField.text integerValue]];
     
     NSString *pin = [generator generateOTPForDate:[NSDate dateWithTimeIntervalSince1970:[self.timestampLabel.text integerValue]]];
     
