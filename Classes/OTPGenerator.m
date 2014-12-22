@@ -131,18 +131,18 @@ NSString *const kOTPGeneratorSHAMD5Algorithm = @"MD5";
 
   const char *ptr = [hash bytes];
   unsigned char offset = ptr[hashLength-1] & 0x0f;
-  unsigned long truncatedHash =
-    NSSwapBigLongToHost(*((unsigned long *)&ptr[offset])) & 0x7fffffff;
-  unsigned long pinValue = truncatedHash % kPinModTable[digits_];
+  unsigned int truncatedHash =
+  NSSwapBigIntToHost(*((unsigned int *)&ptr[offset])) & 0x7fffffff;
+  unsigned int pinValue = truncatedHash % kPinModTable[digits_];
 
   NSLog(@"secret: %@", secret_);
   NSLog(@"counter: %llu", counter);
   NSLog(@"hash: %@", hash);
   NSLog(@"offset: %d", offset);
-  NSLog(@"truncatedHash: %lu", truncatedHash);
-  NSLog(@"pinValue: %lu", pinValue);
+  NSLog(@"truncatedHash: %u", truncatedHash);
+  NSLog(@"pinValue: %u", pinValue);
 
-  return [NSString stringWithFormat:@"%0*lu", digits_, pinValue];
+  return [NSString stringWithFormat:@"%0*u", (int)digits_, pinValue];
 }
 
 @end
